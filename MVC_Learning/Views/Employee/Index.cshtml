@@ -1,0 +1,62 @@
+﻿@model MVC_Learning.Models.Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Hello, I am from Employee Controller and Index Action Method</h1>
+    </div>
+    @*<div>
+        <a href="/home/Index">Home/Index</a><br />
+        <a href="/home/aboutus">Home/Aboutus</a><br />
+        <a href="/Employee/Index">Employee/Index</a><br />
+        <a href="/Employee/aboutus">Employee/Aboutus</a><br />
+    </div>*@
+
+<div>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>@Model.ID</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>@Model.Address</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <label>Date-Time = @DateTime.Now</label>
+    <br />
+    <label>Substraction : @(5 - 3) </label>
+</div>
+
+<div>
+    @{ 
+        var a = 1;
+        var b = 2;
+        var c = a + b;
+        var CurrentTime = DateTime.Now;
+        var TomorrowTime = DateTime.Now.AddDays(1);
+        var colorsList = new List<string>{ "Red","White","Green","Yellow","Pink","Blue"};
+    }
+</div>
+<div>
+    <label>The Addition of @a + @b is: @c</label><br />
+    <label>CurrentTime : @CurrentTime</label><br />
+    <label>FutureTomorrowTime : @TomorrowTime</label><br />
+    <label>Color : @colorsList.FirstOrDefault()</label>
+
+</div>
+</body>
+</html>
