@@ -65,8 +65,8 @@ C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\bin\System.Web.Webpages.Ra
 C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\bin\System.Web.Helpers.xml
 C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\bin\System.Web.Mvc.xml
 C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\obj\Debug\MVC_Learning.csprojAssemblyReference.cache
 C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\obj\Debug\MVC_Learning.csproj.CoreCompileInputs.cache
 C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\obj\Debug\MVC_Learning.csproj.CopyComplete
 C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\obj\Debug\MVC_Learning.dll
 C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\obj\Debug\MVC_Learning.pdb
+C:\Users\itspr\source\repos\MVC_Learning\MVC_Learning\obj\Debug\MVC_Learning.csprojAssemblyReference.cache

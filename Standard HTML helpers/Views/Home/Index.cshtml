@@ -1,0 +1,28 @@
+﻿
+
+<h1>Index</h1>
+
+<div>
+    @Html.ActionLink("Hello", "About", new { name = "Praveen", SecondName = "Prajapati" })
+</div>
+<br />
+<br />
+<div>
+    @{
+        string name = "Praveen";
+    }
+    <label>Name</label>
+    @Html.TextBox("txtName", name, new { id = "NewID", @class = "CustomClass", style = "width:200px" })
+</div>
+<br />
+<br />
+<div>
+    <label>My Checkbox</label>
+    @Html.CheckBox("Checkbox1", false, new { })
+</div>
+<br />
+<br />
+<div>
+    <label>My password</label>
+    @Html.Password("myPassword")
+</div>

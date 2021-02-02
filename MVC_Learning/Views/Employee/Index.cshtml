@@ -1,5 +1,5 @@
-﻿@model MVC_Learning.Models.Employee
-
+﻿@*@model MVC_Learning.Models.Employee*@
+@using MVC_Learning.Models;
 <!DOCTYPE html>
 
 <html>
@@ -12,51 +12,132 @@
         <h1>Hello, I am from Employee Controller and Index Action Method</h1>
     </div>
     @*<div>
-        <a href="/home/Index">Home/Index</a><br />
-        <a href="/home/aboutus">Home/Aboutus</a><br />
-        <a href="/Employee/Index">Employee/Index</a><br />
-        <a href="/Employee/aboutus">Employee/Aboutus</a><br />
-    </div>*@
+            <a href="/home/Index">Home/Index</a><br />
+            <a href="/home/aboutus">Home/Aboutus</a><br />
+            <a href="/Employee/Index">Employee/Index</a><br />
+            <a href="/Employee/aboutus">Employee/Aboutus</a><br />
+        </div>*@
 
-<div>
-    <table>
-        <tr>
-            <td>ID</td>
-            <td>@Model.ID</td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td>@Model.Name</td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td>@Model.Address</td>
-        </tr>
-    </table>
-</div>
+    <div>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>@Model.ID</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>@Model.Address</td>
+            </tr>
+        </table>
+    </div>
 
-<div>
-    <label>Date-Time = @DateTime.Now</label>
-    <br />
-    <label>Substraction : @(5 - 3) </label>
-</div>
+    <div>
+        <label>Date-Time = @DateTime.Now</label>
+        <br />
+        <label>Substraction : @(5 - 3) </label>
+    </div>
 
-<div>
-    @{ 
-        var a = 1;
-        var b = 2;
-        var c = a + b;
-        var CurrentTime = DateTime.Now;
-        var TomorrowTime = DateTime.Now.AddDays(1);
-        var colorsList = new List<string>{ "Red","White","Green","Yellow","Pink","Blue"};
+    <div>
+        @{
+            var a = 1;
+            var b = 2;
+            var c = a + b;
+            var CurrentTime = DateTime.Now;
+            var TomorrowTime = DateTime.Now.AddDays(1);
+            var colorsList = new List<string> { "Red", "White", "Green", "Yellow", "Pink", "Blue" };
+        }
+    </div>
+    @*@if (a < b)
+        {
+            <h1>Ohh Great @CurrentTime</h1>
+            //We can write Any types of Condition inside this block
+        }
+        else
+        {
+            <h1>Ohh No</h1>
+        }*@
+
+    @*Terrinary Operator
+        @(condition ? statement1 : statement2)
+    *@
+
+    @*
+        @for (int i = 0; i <= 10; i++)
+        {
+            <h2>Hello World..!</h2>
+        }
+    *@
+
+    @{
+        var myNewList = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        <text>var myNewList = new List<int>
+                { 1, 2, 3, 4, 5, 6, 7, 8, 9 };</text>
+
     }
-</div>
-<div>
-    <label>The Addition of @a + @b is: @c</label><br />
-    <label>CurrentTime : @CurrentTime</label><br />
-    <label>FutureTomorrowTime : @TomorrowTime</label><br />
-    <label>Color : @colorsList.FirstOrDefault()</label>
 
-</div>
+    @foreach (int newList in myNewList)
+    {
+        <h1>My New Value is @newList</h1>
+    }
+    <div>
+        <label>The Addition of @a + @b is: @c</label><br />
+        <label>CurrentTime : @CurrentTime</label><br />
+        <label>FutureTomorrowTime : @TomorrowTime</label><br />
+        <label>Color : @colorsList.FirstOrDefault()</label>
+
+    </div>
+
+    <div>
+        @{
+            Employee emp = new Employee() { ID = 1, Name = "Praveen", Address = "Bandra" };
+        }
+
+        Id is: @emp.ID and Name: @emp.Name and Address: @emp.Address
+    </div>
+
+    <div>
+        @helper MyListHelper(string[] str)
+        {
+            if (str.Length == 0)
+            {
+                <label>No Data Exists</label>
+            }
+            else
+            {
+                <ul>
+                    @foreach (var items in str)
+                    {
+                        <li>@items</li>
+                    }
+                </ul>
+            }
+        }
+    </div>
+    <br />
+    <div>
+        <label>Example 1 - Name List</label>
+        <div>
+            @MyListHelper(new string[] { "Praveen", "Sanny", "Sanjay", "Kesvan" })
+        </div>
+    </div>
+
+    <div>
+        <label>Programming Languages</label>
+        <div>
+            @MyListHelper(new string[] { "Java", "C#", "Python", "Go Lang" })
+        </div>
+    </div>
+
+    <div>
+        <label>New Programming Languages</label>
+        <div>
+            @MyListHelper(new string[] { })
+        </div>
+    </div>
+
 </body>
 </html>

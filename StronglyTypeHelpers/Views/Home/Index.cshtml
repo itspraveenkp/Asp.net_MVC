@@ -1,0 +1,27 @@
+﻿@using StronglyTypeHelpers.Models
+@model  Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <div>
+        @using (Html.BeginForm("Myform"))
+        {
+            @Html.TextBoxFor(name => name.Name) <br /><br />
+            @Html.TextBoxFor(Address => Address.Address)<br /><br />
+            @Html.CheckBoxFor(isemployee => isemployee.isEmployee)
+            <br />
+            <input type="button" value="Press Me" />
+        }
+    </div>
+
+    <div>
+    </div>
+</body>
+</html>

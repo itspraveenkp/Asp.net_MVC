@@ -1,0 +1,50 @@
+﻿@model Templated_HTML_helpers.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        @Html.DisplayName("ID") - @Html.Editor("ID")
+
+        <br />
+        <br />
+        <hr />
+
+        @Html.DisplayNameFor(Name => Name.Name) - @Html.EditorFor(Name => Name.Name)
+        <br />
+        <br />
+        <hr />
+
+
+        @Html.DisplayNameFor(dob => dob.DateOfBirth) - @Html.EditorFor(dob => dob.DateOfBirth)
+
+        <br />
+        <br />
+        <hr />
+        @Html.DisplayNameFor(bt => bt.BirthTime) - @Html.EditorFor(bt => bt.BirthTime)
+
+        <br />
+        <br />
+        <hr />
+
+
+        @using (Html.BeginForm("myform"))
+        {
+            @Html.EditorForModel()
+            <br />
+            
+            <input type="button" value="Press Me" />
+        }
+
+    </div>
+</body>
+</html>

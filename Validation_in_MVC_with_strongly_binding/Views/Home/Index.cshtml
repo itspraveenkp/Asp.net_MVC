@@ -1,0 +1,30 @@
+﻿@model Validation_in_MVC_with_strongly_binding.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("submitData", "Home", FormMethod.Post))
+        {
+            @Html.TextBoxFor(x => x.firstName) <br />
+            @Html.ValidationMessageFor(x => x.firstName) <br />
+            @Html.TextBoxFor(x => x.lastName) <br />
+            @Html.ValidationMessageFor(x => x.lastName) <br />
+            @Html.TextBoxFor(x => x.Email)<br />
+            @Html.ValidationMessageFor(x => x.Email) <br />
+            @Html.EditorFor(x => x.Age)<br />
+            @Html.ValidationMessageFor(x => x.Age) <br />
+            <br />
+            <input type="submit" value="Click Me" />
+        }
+    </div>
+</body>
+</html>
